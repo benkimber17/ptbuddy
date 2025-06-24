@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PTBuddy - Your Personal Fitness Assistant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fdfdfd;
+      color: #333;
+      line-height: 1.6;
+    }
+    .logo {
+      display: block;
+      margin: 30px auto 10px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+    header {
+      background: linear-gradient(to right, #ff69b4, #ff85c1);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+    .intro {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .intro h2 {
+      color: #ff69b4;
+      font-size: 2rem;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .feature {
+      background: #fff0f5;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+    .feature:hover {
+      transform: scale(1.03);
+    }
+    .form-section {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+      margin-bottom: 3rem;
+    }
+    .form-section h3 {
+      color: #ff69b4;
+      margin-top: 0;
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-family: 'Poppins', sans-serif;
+    }
+    button {
+      background: #ff69b4;
+      color: white;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #e757a5;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="ptbuddy-logo.png" alt="PTBuddy Logo" class="logo" />
+
+  <header>
+    <h1>Meet PTBuddy</h1>
+    <p>Your friendly AI fitness companion built for real women with real goals.</p>
+  </header>
+
+  <div class="container">
+    <section class="intro">
+      <h2>What is PTBuddy?</h2>
+      <p>PTBuddy is your AI-powered personal trainer and nutrition coach, made especially for busy women who want to take back control of their health. Whether you're juggling work, kids, or life in general, PTBuddy is here to make fitness feel simple, supportive, and achievable.</p>
+    </section>
+
+    <section class="features">
+      <div class="feature">
+        <h3>✅ Personalized Fitness Plans</h3>
+        <p>Workouts built around your schedule, fitness level, and equipment access.</p>
+      </div>
+      <div class="feature">
+        <h3>☕ Diet Plans That Fit You</h3>
+        <p>Meals tailored to your tastes, goals, and time constraints—no fads, just facts.</p>
+      </div>
+      <div class="feature">
+        <h3>🧼 Friendly Chat Support</h3>
+        <p>Ask anything about exercises or nutrition and get clear, helpful responses from PTBuddy 24/7.</p>
+      </div>
+      <div class="feature">
+        <h3>🌟 Stay Motivated</h3>
+        <p>Track progress, get reminders, and celebrate small wins that lead to big changes.</p>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <h3>Start Your Journey</h3>
+      <p>Tell us a bit about you and let PTBuddy get to work!</p>
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" id="age" name="age" required />
+        </div>
+        <div class="form-group">
+          <label for="height">Height (cm)</label>
+          <input type="number" id="height" name="height" required />
+        </div>
+        <div class="form-group">
+          <label for="weight">Weight (kg)</label>
+          <input type="number" id="weight" name="weight" required />
+        </div>
+        <div class="form-group">
+          <label for="goals">What are your fitness goals?</label>
+          <textarea id="goals" name="goals" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="obstacles">What might get in the way?</label>
+          <textarea id="obstacles" name="obstacles" rows="2"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="strengths">Your strengths</label>
+          <textarea id="strengths" name="strengths" rows="2"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="weaknesses">Your challenges</label>
+          <textarea id="weaknesses" name="weaknesses" rows="2"></textarea>
+        </div>
+        <button type="submit">Get My Plan</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 PTBuddy. Built with care to help you move better, eat smarter, and feel great.
+  </footer>
+
+</body>
+</html>
